@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>抓大鹅 - 网页版</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="app">
+    <section id="startScreen" class="screen active">
+      <div class="card hero-card">
+        <div class="goose-logo">鹅</div>
+        <h1>抓大鹅</h1>
+        <p class="subtitle">限时找物消除小游戏</p>
+        <div class="rules">
+          <p>点击场景中的物品，把它们放入底部槽位。</p>
+          <p>集齐 3 个相同物品即可自动消除。</p>
+          <p>在时间结束前清空全部物品，就能抓到大鹅。</p>
+        </div>
+        <button id="startBtn" class="primary-btn">开始游戏</button>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen">
+      <header class="topbar">
+        <div class="stat">
+          <span>关卡</span>
+          <strong id="levelText">1</strong>
+        </div>
+        <div class="stat">
+          <span>时间</span>
+          <strong id="timeText">120</strong>
+        </div>
+        <div class="stat">
+          <span>剩余</span>
+          <strong id="leftText">0</strong>
+        </div>
+        <button id="restartBtn" class="small-btn">重开</button>
+      </header>
+
+      <main class="game-layout">
+        <div id="playArea" class="play-area" aria-label="物品堆叠区域"></div>
+
+        <div class="tray-wrap">
+          <div class="tray-title">收集槽</div>
+          <div id="tray" class="tray"></div>
+        </div>
+      </main>
+    </section>
+
+    <section id="resultScreen" class="screen">
+      <div class="card result-card">
+        <div id="resultIcon" class="result-icon">鹅</div>
+        <h2 id="resultTitle">抓到大鹅！</h2>
+        <p id="resultDesc">你成功清空了全部物品。</p>
+        <div class="result-actions">
+          <button id="nextBtn" class="primary-btn">下一关</button>
+          <button id="againBtn" class="secondary-btn">再玩一次</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
